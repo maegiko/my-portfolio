@@ -232,3 +232,7 @@ h1, h2, h3, h4, p, a, ul{
   align-self: center;
   margin-bottom: 10px;
 }
+
+.projects_list {
+  list-style: none;
+}
