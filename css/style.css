@@ -14,6 +14,7 @@
   font-size: 70px;
   font-weight: bolder;
   margin-bottom: 5px;
+  letter-spacing: -0.3rem;
 }
 
 .about {
@@ -81,7 +82,6 @@
 
 .languages strong {
   display: block;
-  margin-bottom: 20px;
   font-size: 20px;
 }
 
@@ -96,7 +96,7 @@
   font-size: 25px;
   font-family: "Poppins";
   text-transform: uppercase;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.1 rem;
 }
 
 .languages li .progress {
@@ -115,7 +115,7 @@
   font-family: "Poppins";
   color: black;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0;
   font-size: 1rem;
   line-height: 2.4rem;
 }
@@ -153,6 +153,8 @@
   font-family: "Poppins";
   font-size: 1.5rem;
   color: #4528e9;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
 }
 
 .about h2 {
@@ -265,11 +267,13 @@ ul {
   display: flex;
   flex-direction: column;
   border-style: solid;
-  border-color: rgb(219, 217, 217);
+  border-color: rgb(219, 234, 245);
   border-radius: 20px;
   padding-right: 1.5rem;
   padding-bottom: 1rem;
+  margin-bottom: 5rem;
   background-color: rgb(237, 247, 254);
+  box-shadow: 10px 10px 20px rgb(177, 177, 177);
 }
 
 .education {
@@ -279,11 +283,12 @@ ul {
   display: flex;
   flex-direction: column;
   border-style: solid;
-  border-color: rgb(219, 217, 217);
+  border-color: rgb(219, 234, 245);
   background-color: rgb(237, 247, 254);
   border-radius: 20px;
   padding-right: 1.5rem;
   padding-bottom: 1rem;
+  box-shadow: 10px 10px 20px rgb(177, 177, 177);
 }
 
 .education-header,
@@ -297,6 +302,7 @@ ul {
   font-weight: bold;
   padding-top: 0;
   margin-top: 0;
+  letter-spacing: -0.1rem;
 }
 
 .resume-about {
@@ -315,7 +321,8 @@ ul {
   margin: 10px;
 }
 
-.education h2, .experience h2 {
+.education h2,
+.experience h2 {
   font-size: 30px;
   color: #1e4373;
 }
@@ -351,3 +358,92 @@ ul {
   width: 100%;
   margin-top: 0;
 }
+
+.hello {
+  letter-spacing: -0.2rem;
+}
+
+.progress_percent {
+  background: #bcd8f1;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.progress_percent div {
+  height: 5px;
+  border-radius: 5px;
+  width: 0%;
+  background: rgba(16, 99, 222, 0.803);
+}
+
+.progress_percent div span {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background: #FFF;
+  float: right;
+  margin-top: -15px;
+  margin-right: -20px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(16, 99, 222, 0.803);
+  font-weight: bold;
+  font-size: 13px;
+  color: rgba(8, 44, 97, 0.803);
+}
+
+.html {
+  animation: html 0.5s linear forwards;
+}
+
+.css {
+  animation: css 0.5s linear forwards;
+}
+
+.javascript {
+  animation: javascript 0.5s linear forwards;
+}
+
+.python {
+  animation: python 0.5s linear forwards;
+}
+
+.C {
+  animation: C 0.5s linear forwards;
+}
+
+@keyframes html {
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes css {
+  100% {
+    width: 60%;
+  }
+}
+
+@keyframes javascript {
+  100% {
+    width: 30%;
+  }
+}
+
+@keyframes python {
+  100% {
+    width: 50%;
+  }
+}
+
+@keyframes C {
+  100% {
+    width: 50%;
+  }
+}
+
+
