@@ -3,27 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <head>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-      />
-      <link rel="icon" href="images/maegika-salty.png">
-    </head>
+    <link rel="stylesheet" href="static/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="images/maegika-heart.png" />
     <title>Hey, it's Ken!</title>
   </head>
   <body>
-    <div class="banner"></div>
-    <div class="welcome">
-      <h1 class="name">Kenneth Koon</h1>
-      <h2>Computer Science @ UNSW</h2>
-      <div class="links">
-        <a href="about.html" class="about_icon"> <i class="fa-solid fa-circle-user"></i></a>
-        <a href="projects.html"><i class="fa-brands fa-github"></i></a>
-        <a href="resume.html"><i class="fa-solid fa-address-card"></i></a>
-        <a href="contact.html"><i class="fa-solid fa-message"></i></a>
+    <header class="header">
+      <a href="#" class="logo">Kenneth</a>
+
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#resume">Resume</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-img">
+        <img src="images/me.jpg" alt="A photo of myself" />
       </div>
-    </div>
+      <div class="home-content">
+        <h1>Hi, it's <span>Kenneth!</span></h1>
+        <h3 class="typing-text">I'm a <span></span></h3>
+        <p>
+          I am a current Computer Science student at UNSW. Formerly a
+          cinematographer/photographer, I have made a transition into tech,
+          exploring a new passion. I love the intersection between creativity
+          and technology and I am eager to keep learning and build meaningful
+          projects. Hopefully, I can apply my diverse experience in new
+          contexts!
+        </p>
+
+        <div class="social-icon">
+          <a
+            href="https://www.linkedin.com/in/kenneth-koon-608586300/"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/maegiko" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://www.instagram.com/kenneth_koon/" target="_blank"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+
+        <a href="#contact" class="hire-btn">Hire Me</a>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h2 class="heading">About <span>Me</span></h2>
+      <div class="container">
+        <div class="row" id="aboutContainer">
+          <div class="bar">
+            <div class="info">
+              <h3 class="about-header">Coding Languages</h3>
+              <ul class="languages">
+                <li>
+                  <strong>HTML</strong>
+                  <div class="progress_percent">
+                    <div class="html">
+                      <span> 75% </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <strong>CSS</strong>
+                  <div class="progress_percent">
+                    <div class="css">
+                      <span> 55% </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <strong>Javascript</strong>
+                  <div class="progress_percent">
+                    <div class="javascript">
+                      <span> 30% </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <strong>Python</strong>
+                  <div class="progress_percent">
+                    <div class="python">
+                      <span> 50% </span>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <strong>C</strong>
+                  <div class="progress_percent">
+                    <div class="C">
+                      <span> 40% </span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="bar">
+            <div class="info">
+              <div class="my-profile">
+                <h3 class="about-header">My Profile</h3>
+                <ul class="my-info">
+                  <li>
+                    <strong>Full Name:</strong>
+                    <span>Kenneth Koon</span>
+                  </li>
+                  <li>
+                    <strong>Role:</strong>
+                    <span>Computer Science Student @ UNSW</span>
+                  </li>
+                  <li>
+                    <strong>Hobbies:</strong>
+                    <span>Gaming, Books, Gym, Movies/Shows</span>
+                  </li>
+                  <li>
+                    <strong>Soft Skills:</strong>
+                    <span
+                      >Communication, Teamwork, Time Management,
+                      Leadership</span
+                    >
+                  </li>
+                  <li>
+                    <strong>Favourite Manga Currently:</strong>
+                    <span>Sakamoto Days</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume" id="resume">
+      <h2 class="heading">My <span>Resume</span></h2>
+      <div class="timeline">
+        <div class="container right">
+          <div class="content">
+            <div class="tag">
+              <h2>University of New South Wales</h2>
+            </div>
+            <div class="desc">
+              <h2>Bachelor of Science</h2>
+              <h3>Computer Science</h3>
+              <h4>2024 - Present</h4>
+            </div>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <div class="tag">
+              <h2>Camera Assistant/First AD</h2>
+            </div>
+            <div class="desc">
+              <h4>2018 - 2023</h4>
+              <ul>
+                <li>
+                  Collaborated closely with cinematographers and camera
+                  operators to ensure smooth and efficient camera operations.
+                </li>
+                <li>
+                  Co-ordinated teams, ensuring production was on schedule and
+                  crew/cast had sufficient communication. Developed time
+                  management skills whilst working in teams.
+                </li>
+                <li>
+                  Gained hands-on experience across various productions while
+                  building a solid understanding of set etiquette and film crew
+                  dynamics.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <div class="tag">
+              <h2>Portrait/Event Photographer</h2>
+            </div>
+            <div class="desc">
+              <h4>2018 - 2023</h4>
+              <ul>
+                <li>
+                  Captured high-quality images tailored to client needs across
+                  various settings, including portraits, events, and promotional
+                  work.
+                </li>
+                <li>
+                  Managed end-to-end workflow including client consultation,
+                  shoot preparation, post-production, and timely delivery of
+                  final images.
+                </li>
+                <li>
+                  Strengthened creative direction, time management, and client
+                  service skills through independent work and repeat clientele.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <div class="tag">
+              <h2>JMC Academy</h2>
+            </div>
+            <div class="desc">
+              <h2>Bachelor of Creative Arts</h2>
+              <h3>Cinematography & Film/Video Production</h3>
+              <h4>2018 - 2020</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects" id="projects">
+      <h2 class="heading">Projects</h2>
+      <div class="projects-container">
+        <div class="projects-box">
+          <a
+            href="https://github.com/maegiko/lostark-task-tracker"
+            class="loa-tracker"
+            target="_blank"
+          >
+            <div class="projects-info">
+              <h4>Lost Ark Tracker</h4>
+              <p>
+                A simple Python and Flask Based Task Tracker for the video-game
+                Lost Ark!
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="projects-box">
+          <div class="projects-info">
+            <h4>Coming soon!</h4>
+            <p>Other Projects</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="heading">Contact <span>Me</span></h2>
+      <form action="https://fabform.io/f/O5NAla8" method="post">
+        <div class="input-box">
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
+          <input type="number" name="number" placeholder="Mobile Number" />
+          <input type="text" name="subject" placeholder="Subject" required />
+        </div>
+        <textarea
+          name="message"
+          id="message"
+          cols="30"
+          rows="10"
+          placeholder="Your Message"
+        ></textarea>
+        <input type="submit" value="Send Message" class="hire-btn" />
+      </form>
+    </section>
+
+    <footer class="footer">
+      <div class="social">
+        <a
+          href="https://www.linkedin.com/in/kenneth-koon-608586300/"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/maegiko" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://www.instagram.com/kenneth_koon/" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <p class="copyright">© Kenneth Koon | All Rights Reserved</p>
+    </footer>
+    <script src="static/script.js"></script>
   </body>
 </html>
