@@ -4,6 +4,20 @@ let navbar = document.querySelector(".navbar");
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav ul li a");
 
+const goTopBtn = document.querySelector(".scroll-top");
+
+// This code here displays the go to top button only if 600px have been
+// scrolled
+window.addEventListener("scroll", checkHeight);
+
+function checkHeight() {
+  if (window.scrollY > 600) {
+    goTopBtn.style.display = "flex";
+  } else {
+    goTopBtn.style.display = "none";
+  }
+}
+
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
@@ -25,4 +39,4 @@ window.onscroll = () => {
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
-}
+};

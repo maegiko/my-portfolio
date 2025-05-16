@@ -415,6 +415,10 @@ span {
   list-style: none;
 }
 
+.languages li strong {
+  font-size: 2rem;
+}
+
 .about {
   background: var(--second-bg-color);
 }
@@ -441,7 +445,6 @@ span {
   border-radius: 1rem;
   background: var(--bg-color);
   transition: 0.3s ease;
-  cursor: pointer;
 }
 
 .about .container .bar:hover {
@@ -479,9 +482,11 @@ span {
   font-size: 1.3rem;
 }
 
-.my-profile h3, .about-header {
+.my-profile h3,
+.about-header {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 .my-info {
@@ -496,7 +501,7 @@ span {
 .my-info strong {
   display: block;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-family: "Poppins", sans-serif;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -505,7 +510,7 @@ span {
 .my-info span {
   display: block;
   font-family: "Poppins", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   max-width: 350px;
   margin-bottom: 2rem;
 }
@@ -612,7 +617,7 @@ span {
 .resume .content .desc {
   margin-left: 1.5rem;
   padding-bottom: 1rem;
-  color: rgb(0, 0, 0)
+  color: rgb(0, 0, 0);
 }
 
 .resume .content .desc li {
@@ -681,6 +686,7 @@ span {
   text-align: center;
   font-size: 5rem;
   margin-bottom: 30px;
+  margin-top: 6rem;
 }
 
 .projects-container {
@@ -710,7 +716,7 @@ span {
   flex-direction: column;
   text-align: left;
   max-height: 200px;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 5em;
 }
@@ -722,10 +728,15 @@ span {
 }
 
 .projects-info p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
   max-height: 100px;
   margin: auto;
+}
+
+.projects-info span {
+  color: var(--text-color);
+  font-style: italic;
 }
 
 @media (max-width: 991px) {
@@ -759,8 +770,43 @@ span {
 .loa-tracker {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
   height: 300px;
+}
+
+.languages-used {
+  display: inline-flex;
+  margin-top: 15px;
+}
+
+.python-container,
+.css-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 12px;
+  height: 2.5rem;
+  background: transparent;
+  border: 0.2rem solid var(--main-color);
+  background-color: var(--second-bg-color);
+  font-size: 2rem;
+  border-radius: 250px;
+  margin: 3rem 1.5rem 3rem 0;
+  transform: 0.3s ease;
+}
+
+.python-container i,
+.css-container i {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.language-name {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  color: var(--text-color);
+  font-weight: 600;
 }
 
 /*Contact Section*/
@@ -839,6 +885,7 @@ span {
   margin-top: 0;
   padding: 0;
   font-size: 18px;
+  font-weight: 500;
   line-height: 1.8;
   margin-bottom: 0;
   text-align: center;
@@ -904,4 +951,26 @@ span {
   .about .container .row {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+/* Scroll to top button CSS */
+.scroll-top {
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  background: var(--bg-color);
+  border: 1px solid var(--main-color);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.scroll-top i {
+  color: var(--main-color);
+  font-size: 30px;
 }
