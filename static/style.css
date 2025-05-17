@@ -345,6 +345,12 @@ span {
 }
 
 /*Skills Section*/
+.languages i {
+  font-size: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 .progress_percent {
   background: var(--second-bg-color);
   width: 100%;
