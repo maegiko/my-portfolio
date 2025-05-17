@@ -807,6 +807,14 @@ span {
   }
 }
 
+.languages {
+  padding: 20px;
+}
+
+.real-lang-bars {
+  padding: 20px;
+}
+
 /*Projects Section*/
 .projects {
   background: var(--second-bg-color);
