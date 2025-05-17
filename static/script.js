@@ -6,7 +6,7 @@ const goTopBtn = document.querySelector(".scroll-top");
 const nav_links = document.querySelectorAll(".navbar a");
 const skills = document.querySelectorAll(".progress_percent");
 const animatedSkills = document.querySelectorAll(
-  ".html, .css, .javascript, .python, .C"
+  ".html, .css, .javascript, .python, .C, .latex, .maple, .english, .cantonese"
 );
 
 // This code here displays the go to top button only if 600px have been

@@ -327,9 +327,26 @@ span {
   }
 }
 
+.location {
+  display: flex;
+  margin-top: 25px;
+  margin-bottom: -10px;
+}
+
+.location i {
+  font-size: 15px;
+  color: #e748336a
+}
+.location p {
+  font-size: 15px;
+  margin-left: 15px;
+  margin-top: -2px;
+  color: #e748336a
+}
+
 /*Skills Section*/
 .progress_percent {
-  background: #bcd8f1;
+  background: var(--second-bg-color);
   width: 100%;
   height: 5px;
   border-radius: 5px;
@@ -340,25 +357,35 @@ span {
   height: 5px;
   border-radius: 5px;
   width: 0%;
-  background: rgba(16, 99, 222, 0.803);
+  background: var(--main-color);
 }
 
 .progress_percent div span {
-  height: 22px;
-  width: 22px;
-  border-radius: 50%;
-  background: #fff;
+  height: 17px;
+  width: 30px;
+  border-radius: 5px;
+  background: var(--text-color);
   float: right;
-  margin-top: -8px;
+  margin-top: 15px;
   margin-right: -20px;
-  color: #333;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(16, 99, 222, 0.803);
+  position: relative;
   font-weight: bold;
-  font-size: 8px;
-  color: rgba(8, 44, 97, 0.803);
+  font-size: 11.3px;
+  color: var(--bg-color);
+}
+
+.progress_percent div span::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 60;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent var(--text-color) transparent; /* arrow pointing down */
 }
 
 .html {
@@ -378,6 +405,22 @@ span {
 }
 
 .C {
+  opacity: 0;
+}
+
+.latex {
+  opacity: 0;
+}
+
+.maple {
+  opacity: 0;
+}
+
+.english {
+  opacity: 0;
+}
+
+.cantonese {
   opacity: 0;
 }
 
@@ -401,9 +444,29 @@ span {
   animation: python 0.5s linear forwards;
 }
 
+.english.visible {
+  opacity: 1;
+  animation: english 0.5s linear forwards;
+}
+
 .C.visible {
   opacity: 1;
   animation: C 0.5s linear forwards;
+}
+
+.latex.visible {
+  opacity: 1;
+  animation: latex 0.5s linear forwards;
+}
+
+.maple.visible {
+  opacity: 1;
+  animation: maple 0.5s linear forwards;
+}
+
+.cantonese.visible {
+  opacity: 1;
+  animation: cantonese 0.5s linear forwards;
 }
 
 @keyframes html {
@@ -433,6 +496,30 @@ span {
 @keyframes C {
   100% {
     width: 40%;
+  }
+}
+
+@keyframes latex {
+  100% {
+    width: 75%;
+  }
+}
+
+@keyframes maple {
+  100% {
+    width: 65%;
+  }
+}
+
+@keyframes english {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cantonese {
+  100% {
+    width: 45%;
   }
 }
 
@@ -521,6 +608,7 @@ span {
 
 .my-info li {
   display: list-item;
+  text-align: center;
 }
 
 .my-info strong {
@@ -528,16 +616,21 @@ span {
   font-weight: bold;
   font-size: 2rem;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   padding-bottom: 0;
+  color: #ffffffd0;
 }
 
 .my-info span {
   display: block;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  max-width: 350px;
   margin-bottom: 2rem;
+}
+
+.real-languages {
+  margin-top: 3rem;
+  color: var(--text-color);
 }
 
 /*Resume Section*/
