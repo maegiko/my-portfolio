@@ -1,10 +1,13 @@
 let menuIcon = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
-
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav ul li a");
-
 const goTopBtn = document.querySelector(".scroll-top");
+const nav_links = document.querySelectorAll(".navbar a");
+const skills = document.querySelectorAll(".progress_percent");
+const animatedSkills = document.querySelectorAll(
+  ".html, .css, .javascript, .python, .C"
+);
 
 // This code here displays the go to top button only if 600px have been
 // scrolled
@@ -30,7 +33,7 @@ window.onscroll = () => {
         links.classList.remove("active");
         document
           .querySelector("header nav ul li a[href*=" + id + " ]")
-          .classList.add(active);
+          .classList.add("active");
       });
     }
   });
@@ -40,3 +43,41 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute("id");
+        nav_links.forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${id}`
+          );
+        });
+      }
+    });
+  },
+  {
+    threshold: 0.6,
+  }
+);
+
+sections.forEach((section) => observer.observe(section));
+
+const skillObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  },
+  {
+    threshold: 0.7,
+  }
+);
+
+animatedSkills.forEach((el) => skillObserver.observe(el));

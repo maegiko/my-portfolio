@@ -362,22 +362,47 @@ span {
 }
 
 .html {
-  animation: html 0.5s linear forwards;
+  opacity: 0;
 }
 
 .css {
-  animation: css 0.5s linear forwards;
+  opacity: 0;
 }
 
 .javascript {
-  animation: javascript 0.5s linear forwards;
+  opacity: 0;
 }
 
 .python {
-  animation: python 0.5s linear forwards;
+  opacity: 0;
 }
 
 .C {
+  opacity: 0;
+}
+
+.html.visible {
+  opacity: 1;
+  animation: html 0.5s linear forwards;
+}
+
+.css.visible {
+  opacity: 1;
+  animation: css 0.5s linear forwards;
+}
+
+.javascript.visible {
+  opacity: 1;
+  animation: javascript 0.5s linear forwards;
+}
+
+.python.visible {
+  opacity: 1;
+  animation: python 0.5s linear forwards;
+}
+
+.C.visible {
+  opacity: 1;
   animation: C 0.5s linear forwards;
 }
 
