@@ -639,6 +639,12 @@ span {
   color: var(--text-color);
 }
 
+.my-info p {
+  font-size: 1.7rem;
+  padding: 20px;
+  padding-top: 0px;
+}
+
 /*Resume Section*/
 .resume {
   background: var(--bg-color);
