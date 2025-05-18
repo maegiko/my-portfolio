@@ -173,6 +173,7 @@ span {
 .home-content p {
   font-size: 1.8rem;
   font-weight: 500;
+  margin-top: 25px;
 }
 
 .social-icon a {
@@ -335,13 +336,13 @@ span {
 
 .location i {
   font-size: 15px;
-  color: #e748336a
+  color: #ff1e0061;
 }
 .location p {
   font-size: 15px;
   margin-left: 15px;
   margin-top: -2px;
-  color: #e748336a
+  color: #ff1e0061;
 }
 
 /*Skills Section*/
@@ -675,7 +676,7 @@ span {
   width: 50%;
 }
 
-.resume .container::after {
+.resume .container.right::after {
   content: "\f501";
   position: absolute;
   width: 25px;
@@ -690,7 +691,26 @@ span {
   font-size: 1.89rem;
   text-align: center;
   font-weight: 600;
-  font-family: "Font Awesome\ 5 Free";
+  font-family: "Font Awesome 5 Free";
+  color: rgb(131, 68, 68);
+}
+
+.resume .container.left::after {
+  content: "\f0b1";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  right: -17px;
+  background-color: rgb(252, 252, 252);
+  border: 4px solid var(--main-color);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 100;
+  font-size: 1.89rem;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
   color: rgb(131, 68, 68);
 }
 
@@ -994,7 +1014,7 @@ span {
   bottom: 0;
   width: 100%;
   padding: 40px 0;
-  background-color: var(--main-color);
+  background-color: rgba(253, 93, 93, 0.658);
 }
 
 .footer .social {
@@ -1115,4 +1135,77 @@ span {
 .scroll-top i {
   color: var(--main-color);
   font-size: 30px;
+}
+
+/* Animations */
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fade-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+.heading.animate,
+.social.animate,
+.list.animate,
+.copyright.animate {
+  animation: fade-down 1s ease-in;
+  opacity: 1;
+}
+
+.bar.animate,
+.timeline.animate,
+.projects-box.animate,
+.contact-form.animate {
+  animation: fade-up 1s ease-in;
+  opacity: 1;
+}
+
+.heading,
+.bar,
+.timeline,
+.projects-box,
+.contact-form,
+.social .list,
+.copyright,
+.hey-there,
+.home-img,
+.home-second,
+.header {
+  opacity: 0;
+  transition: opacity 1s ease-in, transform 1s ease-in;
+}
+
+.hey-there.animate {
+  animation: fade-up 0.5s ease-in;
+  opacity: 1;
+}
+
+.home-img.animate,
+.header.animate {
+  animation: fade-down 0.5s ease-in;
+  opacity: 1;
+}
+
+.home-second.animate {
+  animation: fade-up 0.5s ease-in;
+  opacity: 1;
 }
