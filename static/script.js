@@ -79,7 +79,92 @@ const contentObserver = new IntersectionObserver(
 );
 
 const content = document.querySelectorAll(
-  ".heading, .bar, .timeline, .projects-box, .contact-form, .social, .list, .copyright, .hey-there, .home-img, .home-second, .header"
+  ".heading, .bar, .timeline, .projects-container, .contact-form, .social, .list, .copyright, .hey-there, .home-img, .home-second, .header"
 );
 
 content.forEach((el) => contentObserver.observe(el));
+
+// Tic Tac Toe
+const cells = document.querySelectorAll(".cell");
+const statusText = document.getElementById("status");
+const restartBtn = document.getElementById("restart");
+
+let board = ["", "", "", "", "", "", "", "", ""];
+let currentPlayer = "X";
+let gameActive = true;
+
+const winCombos = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
+
+// 🎯 Modified to return the winning combo instead of just "X" or "O"
+function checkWinner() {
+  for (let combo of winCombos) {
+    const [a, b, c] = combo;
+    if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+      return combo; // Return the winning combination
+    }
+  }
+  if (!board.includes("")) return "draw";
+  return null;
+}
+
+const winSound = new Audio("sounds/mixkit-achievement-bell-600.wav");
+winSound.volume = 0.2;
+
+function handleClick(e) {
+  const index = e.target.dataset.index;
+  if (board[index] || !gameActive) return;
+
+  board[index] = currentPlayer;
+  e.target.textContent = currentPlayer;
+  e.target.style.color = "#e74833";
+
+  const result = checkWinner();
+
+  if (Array.isArray(result)) {
+    statusText.textContent = `Player ${currentPlayer} wins!`;
+    statusText.style.color = "#e74833";
+    winSound.play();
+    gameActive = false;
+
+    result.forEach(i => {
+      cells[i].classList.add("winning-cell");
+    });
+
+  } else if (result === "draw") {
+    statusText.textContent = "It's a draw!";
+    statusText.style.color = "#e74833";
+    winSound.play();
+    gameActive = false;
+  } else {
+    currentPlayer = currentPlayer === "X" ? "O" : "X";
+    statusText.textContent = `Player ${currentPlayer}'s turn`;
+  }
+}
+
+function restartGame() {
+  board = ["", "", "", "", "", "", "", "", ""];
+  currentPlayer = "X";
+  gameActive = true;
+
+  cells.forEach(cell => {
+    cell.textContent = "";
+    cell.style.color = "#e74833";
+    cell.classList.remove("winning-cell");
+  });
+
+  statusText.textContent = `Player ${currentPlayer}'s turn`;
+  statusText.style.color = "#fff";
+}
+
+cells.forEach(cell => cell.addEventListener("click", handleClick));
+restartBtn.addEventListener("click", restartGame);
+
